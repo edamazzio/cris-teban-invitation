@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Pinyon_Script, IM_Fell_Double_Pica } from "next/font/google";
 
-const italianno = Pinyon_Script({
+const pinyonScript = Pinyon_Script({
   weight: "400",
   subsets: ["latin"]
 });
@@ -18,7 +18,7 @@ export default function Portada() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <section className="h-[98vh] w-full flex flex-col items-center justify-center relative">
+    <section className="h-screen w-full flex flex-col items-center justify-center relative">
       {/* Blurred background - shown initially */}
       <Image
         src="/backgrounds/Portada/background_blurred.webp"
@@ -40,10 +40,10 @@ export default function Portada() {
         onLoad={() => setImageLoaded(true)}
       />
       <div className="text-center absolute top-[30%] md:top-[25%] left-1/2 -translate-x-1/2 z-10 transition-all duration-500 w-full">
-        <h1 className={`text-5xl md:text-6xl font-bold text-amber-50 mb-4 ${italianno.className}`}>
+        <h1 className={`text-5xl md:text-6xl font-bold text-amber-50 mb-4 ${pinyonScript.className}`}>
           Cristel & Esteban
         </h1>
-        <p className={`text-xl md:text-2xl text-amber-50 ${italianno.className}`}>
+        <p className={`text-xl md:text-2xl text-amber-50 ${pinyonScript.className}`}>
           ¡Nos casamos!
         </p>
           <p className={`text-sm md:text-m text-amber-50 ${im_fell.className}`}>
@@ -55,7 +55,7 @@ export default function Portada() {
 
       </div>
       {/*<div className="absolute bottom-8 text-center z-10">*/}
-      {/*  <p className={`text-xl text-black ${italianno.className}`}>*/}
+      {/*  <p className={`text-xl text-black ${pinyonScript.className}`}>*/}
       {/*    21 de Febrero del 2026*/}
       {/*  </p>*/}
       {/*</div>*/}
