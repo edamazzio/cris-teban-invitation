@@ -8,21 +8,31 @@ import ScrollSection from "./components/ScrollSection";
 export default function Home() {
     return (
         <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
-            <ScrollSection>
-                <Portada/>
-            </ScrollSection>
-            <ScrollSection>
-                <Invitacion/>
-            </ScrollSection>
-            <ScrollSection>
-                <Agenda/>
-            </ScrollSection>
-            <ScrollSection>
-                <CodigoVestimenta/>
-            </ScrollSection>
-            <ScrollSection>
-                <Logistica/>
-            </ScrollSection>
+            {/*<ScrollSection>*/}
+            {/*    <Portada/>*/}
+            {/*</ScrollSection>*/}
+            {/*<ScrollSection>*/}
+            {/*    <Invitacion/>*/}
+            {/*</ScrollSection>*/}
+            {/*<ScrollSection>*/}
+            {/*    <Agenda/>*/}
+            {/*</ScrollSection>*/}
+            {/*<ScrollSection>*/}
+            {/*    <CodigoVestimenta/>*/}
+            {/*</ScrollSection>*/}
+            {/*<ScrollSection>*/}
+            {/*    <Logistica/>*/}
+            {/*</ScrollSection>*/}
+            <section className="h-screen w-full flex items-center justify-center bg-gradient-to-br from-green-100 to-emerald-100">
+                <div className="text-center">
+                    <h2 className="text-5xl font-bold text-gray-800 mb-6">
+                        Hola!
+                    </h2>
+                    <p className="text-xl text-gray-600">
+                        Estamos trabajando en esto todavía!
+                    </p>
+                </div>
+            </section>
         </div>
     );
 }
