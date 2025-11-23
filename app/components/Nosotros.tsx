@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
@@ -21,10 +20,6 @@ const im_fell = IM_Fell_Double_Pica({
 
 export default function Nosotros() {
     const OPTIONS: EmblaOptionsType = { loop: true }
-    const SLIDE_COUNT = 5
-    const SLIDES = Array.from(Array(SLIDE_COUNT).keys()).map(x=> {
-        return (<span className={"text-black"} key={x}>{x}</span>)
-    })
     return (
         <>
             <style jsx global>{`

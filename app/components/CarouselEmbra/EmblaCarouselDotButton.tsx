@@ -39,8 +39,11 @@ export const useDotButton = (
     useEffect(() => {
         if (!emblaApi) return
 
-        onInit(emblaApi)
-        onSelect(emblaApi)
+        const updateDots = () => {
+            onInit(emblaApi)
+            onSelect(emblaApi)
+        }
+        updateDots()
         emblaApi.on('reInit', onInit).on('reInit', onSelect).on('select', onSelect)
     }, [emblaApi, onInit, onSelect])
 
