@@ -22,7 +22,7 @@ export default function FincaLaLucia() {
 
     return (
         <section className="min-h-[80vh] w-full flex flex-col items-center justify-center bg-[#f8f2ee] relative py-12 px-4">
-            <div className="w-full max-w-4xl mx-auto">
+            <div className="w-11/12 max-w-md mx-">
                 {/* Title */}
                 <h2 className={`${pinyonScript.className} text-5xl sm:text-6xl md:text-7xl text-[#626839] text-center mb-3`}>
                     Finca La Lucía
@@ -47,7 +47,7 @@ export default function FincaLaLucia() {
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
                     {/* Google Maps Button */}
                     <a
                         href={googleMapsUrl}
@@ -55,11 +55,19 @@ export default function FincaLaLucia() {
                         rel="noopener noreferrer"
                         className="w-full sm:w-auto group"
                     >
-                        <button className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-[#626839] hover:bg-[#626839] text-[#626839] hover:text-[#f8f2ee] rounded-full transition-all duration-300 shadow-md hover:shadow-xl flex items-center justify-center gap-3">
-                            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span className={`${im_fell.className} text-sm tracking-wider`}>
+                        <button className="w-full sm:w-auto px-5 py-2.5 bg-transparent border-2 border-[#626839] hover:bg-[#626839] text-[#626839] hover:text-[#f8f2ee] rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group">
+                            {/* Google Maps Icon */}
+                            <Image
+                                src="/maps.svg"
+                                alt="Maps"
+                                width={16}
+                                height={16}
+                                className="w-4 h-4 brightness-0 saturate-100 contrast-[0.6] opacity-70 group-hover:brightness-100 group-hover:opacity-100"
+                                style={{
+                                    filter: 'invert(37%) sepia(10%) saturate(1264%) hue-rotate(58deg) brightness(94%) contrast(89%)'
+                                }}
+                            />
+                            <span className={`${im_fell.className} text-xs tracking-wider`}>
                                 Abrir en Google Maps
                             </span>
                         </button>
@@ -72,11 +80,19 @@ export default function FincaLaLucia() {
                         rel="noopener noreferrer"
                         className="w-full sm:w-auto group"
                     >
-                        <button className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-[#33ccff] hover:bg-[#33ccff] text-[#626839] hover:text-white rounded-full transition-all duration-300 shadow-md hover:shadow-xl flex items-center justify-center gap-3">
-                            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 1.74.5 3.37 1.41 4.84.95 1.54 2.2 2.86 3.16 4.4.47.75.81 1.45 1.17 2.26.26.55.47 1.5 1.26 1.5s1-.95 1.26-1.5c.36-.81.7-1.51 1.17-2.26.96-1.54 2.21-2.86 3.16-4.4C18.5 12.37 19 10.74 19 9c0-3.87-3.13-7-7-7zm0 9.75c-1.52 0-2.75-1.23-2.75-2.75S10.48 6.25 12 6.25s2.75 1.23 2.75 2.75-1.23 2.75-2.75 2.75z"/>
-                            </svg>
-                            <span className={`${im_fell.className} text-sm tracking-wider`}>
+                        <button className="w-full sm:w-auto px-5 py-2.5 bg-transparent border-2 border-[#33ccff] hover:bg-[#33ccff] text-[#33ccff] hover:text-white rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group">
+                            {/* Waze Icon */}
+                            <Image
+                                src="/waze.svg"
+                                alt="Waze"
+                                width={16}
+                                height={16}
+                                className="w-4 h-4 brightness-0 saturate-100 group-hover:brightness-100"
+                                style={{
+                                    filter: 'invert(68%) sepia(85%) saturate(2398%) hue-rotate(169deg) brightness(101%) contrast(101%)'
+                                }}
+                            />
+                            <span className={`${im_fell.className} text-xs tracking-wider`}>
                                 Abrir en Waze
                             </span>
                         </button>
