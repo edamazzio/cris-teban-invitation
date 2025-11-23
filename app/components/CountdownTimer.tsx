@@ -59,43 +59,43 @@ export default function CountdownTimer({
     const formatNumber = (num: number) => String(num).padStart(2, '0');
 
     return (
-        <div className="flex flex-col items-center justify-center py-4 sm:py-8 px-4">
+        <div className="flex flex-col items-center justify-center py-8 px-4">
             {/* "FALTAN" text */}
-            <p className={`${im_fell.className} text-xs sm:text-sm tracking-[0.3em] text-[#e8e4d8] mb-4 sm:mb-6`}>
+            <p className={`${im_fell.className} text-sm tracking-[0.3em] text-[#e8e4d8] mb-6`}>
                 FALTAN
             </p>
 
             {/* Countdown numbers */}
-            <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 mb-3 sm:mb-4">
-                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-[#e8e4d8] tabular-nums">
+            <div className="flex items-center gap-3 mb-4">
+                <span className="text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums">
                     {formatNumber(timeLeft.days)}
                 </span>
-                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-[#e8e4d8]">:</span>
-                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-[#e8e4d8] tabular-nums">
+                <span className="text-4xl md:text-5xl font-light text-[#e8e4d8]">:</span>
+                <span className="text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums">
                     {formatNumber(timeLeft.hours)}
                 </span>
-                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-[#e8e4d8]">:</span>
-                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-[#e8e4d8] tabular-nums">
+                <span className="text-4xl md:text-5xl font-light text-[#e8e4d8]">:</span>
+                <span className="text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums">
                     {formatNumber(timeLeft.minutes)}
                 </span>
-                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-[#e8e4d8]">:</span>
-                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-[#e8e4d8] tabular-nums">
+                <span className="text-4xl md:text-5xl font-light text-[#e8e4d8]">:</span>
+                <span className="text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums">
                     {formatNumber(timeLeft.seconds)}
                 </span>
             </div>
 
             {/* Labels */}
-            <div className="flex items-center gap-3 sm:gap-6 md:gap-8 lg:gap-12">
-                <span className={`${im_fell.className} text-[10px] sm:text-xs tracking-wider text-[#e8e4d8] w-10 sm:w-12 text-center`}>
+            <div className="flex items-center gap-8 md:gap-12">
+                <span className={`${im_fell.className} text-xs tracking-wider text-[#e8e4d8] w-12 text-center`}>
                     {labels.days}
                 </span>
-                <span className={`${im_fell.className} text-[10px] sm:text-xs tracking-wider text-[#e8e4d8] w-10 sm:w-12 text-center`}>
+                <span className={`${im_fell.className} text-xs tracking-wider text-[#e8e4d8] w-12 text-center`}>
                     {labels.hours}
                 </span>
-                <span className={`${im_fell.className} text-[10px] sm:text-xs tracking-wider text-[#e8e4d8] w-10 sm:w-12 text-center`}>
+                <span className={`${im_fell.className} text-xs tracking-wider text-[#e8e4d8] w-12 text-center`}>
                     {labels.minutes}
                 </span>
-                <span className={`${im_fell.className} text-[10px] sm:text-xs tracking-wider text-[#e8e4d8] w-10 sm:w-12 text-center`}>
+                <span className={`${im_fell.className} text-xs tracking-wider text-[#e8e4d8] w-12 text-center`}>
                     {labels.seconds}
                 </span>
             </div>

@@ -23,7 +23,7 @@ export default function Invitacion() {
             className="w-full min-h-[100vh] flex flex-col items-center justify-start relative bg-[#f8f2ee] py-4"
         >
             {/* Image at the top */}
-            <div className="w-full max-w-md flex items-center justify-center px-4 mb-4">
+            <div className="w-full max-w-md flex items-center justify-center px-4 mb-4 mt-10">
                 <div className="relative w-full" style={{ aspectRatio: '3/4' }}>
                     <Image
                         src="/backgrounds/Invitacion/us2.jpg"
@@ -39,21 +39,21 @@ export default function Invitacion() {
 
             {/* Content below the image */}
             <div className="w-full flex flex-col items-center justify-center px-4 py-2">
-                <p className={`${pinyonScript.className} text-[#626839] text-lg sm:text-xl leading-relaxed w-11/12 sm:w-8/12 text-center`}>
+                <p className={`${pinyonScript.className} text-[#626839] text-xl w-11/12 sm:w-8/12 text-center`}>
                     A donde tú vayas, yo iré; dondequiera que tú vivas, yo viviré
                 </p>
-                <p className={`${pinyonScript.className} text-[#626839] mt-3 text-lg sm:text-xl w-11/12 sm:w-8/12 text-center`}>
+                <p className={`${pinyonScript.className} text-[#626839] mt-3 text-xl w-11/12 sm:w-8/12 text-center`}>
                     Ruth 1:16
                 </p>
             </div>
-            
+
             {/* Audio player */}
             <div className="w-full flex justify-center px-4 py-4 mt-2">
                 <AudioPlayer
                     src="/audio/nuestra_cancion.mp3"
                     loop={false}
                     className={`!bg-[#f8f2ee] !shadow-none w-full sm:!w-3/4 max-w-md`}
-                    header={<span className={`text-[#626839] flex justify-center text-xs sm:text-sm ${im_fell.className}`}> Dale play a nuestra cancion</span>}
+                    header={<span className={`text-[#626839] flex justify-center text-sm ${im_fell.className}`}> Dale play a nuestra cancion</span>}
                     customAdditionalControls={[]}
                     customVolumeControls={[]}
                 />
