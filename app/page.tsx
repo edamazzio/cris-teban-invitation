@@ -1,9 +1,9 @@
-import Portada from "./components/Portada";
 import Agenda from "./components/Agenda";
 import CodigoVestimenta from "./components/CodigoVestimenta";
-import Invitacion from "./components/Invitacion";
+import Nosotros from "./components/Nosotros";
 import Logistica from "./components/Logistica";
 import DateCountdown from "./components/DateCountdown";
+import Invitacion from "./components/Invitacion";
 
 interface HomeProps {
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
@@ -25,24 +25,12 @@ export default async function Home({searchParams}: HomeProps) {
 
     return (
         <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
-            {/*<ScrollSection>*/}
-            <Portada/>
-            {/*</ScrollSection>*/}
-            {/*<ScrollSection>*/}
-            {/*</ScrollSection>*/}
-            {/*<ScrollSection>*/}
             <Invitacion/>
-            {/*</ScrollSection>*/}
-            {/*<ScrollSection>*/}
+            <Nosotros/>
             <DateCountdown/>
             <Agenda/>
-            {/*</ScrollSection>*/}
-            {/*<ScrollSection>*/}
             <CodigoVestimenta/>
-            {/*</ScrollSection>*/}
-            {/*<ScrollSection>*/}
             <Logistica/>
-            {/*</ScrollSection>*/}
         </div>
     );
 }
