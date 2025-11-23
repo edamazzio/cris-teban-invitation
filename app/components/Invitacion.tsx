@@ -18,7 +18,7 @@ const im_fell = IM_Fell_Double_Pica({
 })
 
 export default function Invitacion() {
-    let section = <>
+    const section = <>
         <section
             className="w-full h-[100vh] flex flex-col items-center justify-start relative bg-[#f8f2ee]"
             // className="w-full h-[100vh] flex flex-col items-center justify-start relative bg-[#000]"

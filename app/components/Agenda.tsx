@@ -1,5 +1,7 @@
-import AgendaItem from "./AgendaItem";
-import {Pinyon_Script} from "next/font/google";
+import AgendaTimelineItem from "./AgendaTimelineItem";
+import { Pinyon_Script } from "next/font/google";
+import Image from "next/image";
+
 const pinyonScript = Pinyon_Script({
     weight: "400",
     subsets: ["latin"]
@@ -8,23 +10,26 @@ const pinyonScript = Pinyon_Script({
 export default function Agenda() {
     return (
         <section
-            className="h-[60vh] w-full flex items-center justify-center bg-[#f8f2ee] relative"
-            // style={{
-            //     backgroundImage: 'url(/backgrounds/Agenda/agenda_bg.png)',
-            //     backgroundSize: 'auto 100%',
-            //     backgroundPosition: 'center',
-            //     backgroundRepeat: 'repeat-x'
-            // }}
+            className="h-[60vh] w-full flex items-center justify-center bg-[#f8f2ee] relative "
         >
-            <div
-                className="absolute inset-0"
-                style={{
-                    backgroundImage: 'url(/backgrounds/Agenda/agenda.png)',
-                    backgroundSize: 'contain',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat'
-                }}
-            />
+            <div className="w-11/12 mx-auto py-10 border-2 border-[#9ca085] rounded-[3rem] bg-[#f5efe8] relative">
+
+                {/* Agenda Title */}
+                <h2 className={`${pinyonScript.className} text-4xl text-[#626839] text-center mb-12`}>
+                    Agenda
+                </h2>
+
+                {/* Schedule Items */}
+                <div className="space-y-8 text-center">
+                    <AgendaTimelineItem time="10am" description="ceremonia" />
+                    <AgendaTimelineItem time="11am" description="Fotitos familiares" />
+                    <AgendaTimelineItem 
+                        time="12md - 3pm" 
+                        description={["Bienvenida, Almuerzo,", "tiempo familiar"]} 
+                    />
+                    <AgendaTimelineItem time="3pm - 4pm" description="Cierre especial" />
+                </div>
+            </div>
         </section>
     );
 }
