@@ -21,7 +21,7 @@ export default function FincaLaLucia() {
     const wazeUrl = `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`;
 
     return (
-        <section className="min-h-[80vh] w-full flex flex-col items-center justify-center bg-[#f8f2ee] relative py-12 px-4">
+        <section className="min-h-[60vh] w-full flex flex-col items-center justify-center bg-[#f8f2ee] relative py-12 px-4">
             <div className="w-11/12 max-w-md mx-">
                 {/* Title */}
                 <h2 className={`${pinyonScript.className} text-5xl sm:text-6xl md:text-7xl text-[#626839] text-center mb-3`}>

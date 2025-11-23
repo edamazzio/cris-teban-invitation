@@ -6,6 +6,8 @@ import 'react-h5-audio-player/lib/styles.css';
 
 
 import {IM_Fell_Double_Pica, Pinyon_Script} from "next/font/google";
+        import {EmblaOptionsType} from "embla-carousel";
+import EmblaCarousel from "./CarouselEmbra/EmblaCarousel";
 
 const pinyonScript = Pinyon_Script({
     weight: "400",
@@ -15,9 +17,14 @@ const pinyonScript = Pinyon_Script({
 const im_fell = IM_Fell_Double_Pica({
     weight: "400",
     subsets: ["latin"]
-})
+});
 
 export default function Nosotros() {
+    const OPTIONS: EmblaOptionsType = { loop: true }
+    const SLIDE_COUNT = 5
+    const SLIDES = Array.from(Array(SLIDE_COUNT).keys()).map(x=> {
+        return (<span className={"text-black"} key={x}>{x}</span>)
+    })
     return (
         <>
             <style jsx global>{`
@@ -39,19 +46,27 @@ export default function Nosotros() {
             `}</style>
 
             <section
-                className="w-full min-h-[100vh] flex flex-col items-center justify-start relative bg-[#f8f2ee] py-4">
+                className="w-full min-h-[30vh] flex flex-col items-center justify-start relative bg-[#f8f2ee] py-4">
                 {/* Image at the top */}
                 <div className="w-full max-w-md flex items-center justify-center px-4 mb-4 mt-10">
-                    <div className="relative w-full" style={{aspectRatio: '3/4'}}>
-                        <Image
-                            src="/backgrounds/Invitacion/us2.jpg"
-                            alt="Portada background"
-                            fill
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                            className="object-contain"
-                            priority
-                            quality={100}
-                        />
+                    <div className="relative w-full">
+                        <EmblaCarousel imgSources={[
+                            "/backgrounds/Invitacion/us2.jpg",
+                            "/us/us1.jpg",
+                            "/us/us2.jpg",
+                            "/us/us3.jpg",
+                            "/us/us4.jpg",
+                        ]} options={OPTIONS} />
+
+                        {/*<Image*/}
+                        {/*    src="/backgrounds/Invitacion/us2.jpg"*/}
+                        {/*    alt="Portada background"*/}
+                        {/*    fill*/}
+                        {/*    sizes="(max-width: 768px) 100vw, 50vw"*/}
+                        {/*    className="object-contain"*/}
+                        {/*    priority*/}
+                        {/*    quality={100}*/}
+                        {/*/>*/}
                     </div>
                 </div>
 

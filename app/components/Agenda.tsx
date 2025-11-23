@@ -9,7 +9,7 @@ const pinyonScript = Pinyon_Script({
 export default function Agenda() {
     return (
         <section
-            className="min-h-[60vh] w-full flex items-center justify-center bg-[#f8f2ee] relative py-8"
+            className="min-h-[40vh] w-full flex items-center justify-center bg-[#f8f2ee] relative py-8"
         >
             <div
                 className="w-11/12 max-w-md mx-6 py-6 sm:py-10 px-4 sm:px-6 border-2 border-[#9ca085] rounded-[2rem] sm:rounded-[3rem] bg-[#f5efe8] relative">
