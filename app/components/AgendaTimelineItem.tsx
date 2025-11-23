@@ -1,4 +1,4 @@
-import { Pinyon_Script, IM_Fell_Double_Pica } from "next/font/google";
+import {IM_Fell_Double_Pica, Pinyon_Script} from "next/font/google";
 
 const pinyonScript = Pinyon_Script({
     weight: "400",
@@ -15,7 +15,7 @@ interface AgendaTimelineItemProps {
     description: string | string[];
 }
 
-export default function AgendaTimelineItem({ time, description }: AgendaTimelineItemProps) {
+export default function AgendaTimelineItem({time, description}: AgendaTimelineItemProps) {
     const descriptions = Array.isArray(description) ? description : [description];
 
     return (

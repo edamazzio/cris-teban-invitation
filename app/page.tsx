@@ -3,13 +3,13 @@ import Agenda from "./components/Agenda";
 import CodigoVestimenta from "./components/CodigoVestimenta";
 import Invitacion from "./components/Invitacion";
 import Logistica from "./components/Logistica";
-import ScrollSection from "./components/ScrollSection";
+import DateCountdown from "./components/DateCountdown";
 
 interface HomeProps {
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-export default async function Home({ searchParams }: HomeProps) {
+export default async function Home({searchParams}: HomeProps) {
     const params = await searchParams;
     const showContent = params.ver === 'si';
 
@@ -26,19 +26,22 @@ export default async function Home({ searchParams }: HomeProps) {
     return (
         <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
             {/*<ScrollSection>*/}
-                <Portada/>
+            <Portada/>
             {/*</ScrollSection>*/}
             {/*<ScrollSection>*/}
-                <Invitacion/>
             {/*</ScrollSection>*/}
             {/*<ScrollSection>*/}
-                <Agenda/>
+            <Invitacion/>
             {/*</ScrollSection>*/}
             {/*<ScrollSection>*/}
-                <CodigoVestimenta/>
+            <DateCountdown/>
+            <Agenda/>
             {/*</ScrollSection>*/}
             {/*<ScrollSection>*/}
-                <Logistica/>
+            <CodigoVestimenta/>
+            {/*</ScrollSection>*/}
+            {/*<ScrollSection>*/}
+            <Logistica/>
             {/*</ScrollSection>*/}
         </div>
     );

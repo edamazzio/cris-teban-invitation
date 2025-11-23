@@ -1,6 +1,5 @@
 import AgendaTimelineItem from "./AgendaTimelineItem";
-import { Pinyon_Script } from "next/font/google";
-import Image from "next/image";
+import {Pinyon_Script} from "next/font/google";
 
 const pinyonScript = Pinyon_Script({
     weight: "400",
@@ -21,13 +20,13 @@ export default function Agenda() {
 
                 {/* Schedule Items */}
                 <div className="space-y-8 text-center">
-                    <AgendaTimelineItem time="10am" description="ceremonia" />
-                    <AgendaTimelineItem time="11am" description="Fotitos familiares" />
-                    <AgendaTimelineItem 
-                        time="12md - 3pm" 
-                        description={["Bienvenida, Almuerzo,", "tiempo familiar"]} 
+                    <AgendaTimelineItem time="10am" description="ceremonia"/>
+                    <AgendaTimelineItem time="11am" description="Fotitos familiares"/>
+                    <AgendaTimelineItem
+                        time="12md - 3pm"
+                        description={["Bienvenida, Almuerzo,", "tiempo familiar"]}
                     />
-                    <AgendaTimelineItem time="3pm - 4pm" description="Cierre especial" />
+                    <AgendaTimelineItem time="3pm - 4pm" description="Cierre especial"/>
                 </div>
             </div>
         </section>
