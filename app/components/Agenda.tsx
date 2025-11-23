@@ -8,13 +8,13 @@ const pinyonScript = Pinyon_Script({
 export default function Agenda() {
     return (
         <section
-            className="h-screen w-full flex items-center justify-center bg-[#fffcf7] relative"
-            style={{
-                backgroundImage: 'url(/backgrounds/Agenda/agenda_bg.png)',
-                backgroundSize: 'auto 100%',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'repeat-x'
-            }}
+            className="h-[60vh] w-full flex items-center justify-center bg-[#f8f2ee] relative"
+            // style={{
+            //     backgroundImage: 'url(/backgrounds/Agenda/agenda_bg.png)',
+            //     backgroundSize: 'auto 100%',
+            //     backgroundPosition: 'center',
+            //     backgroundRepeat: 'repeat-x'
+            // }}
         >
             <div
                 className="absolute inset-0"

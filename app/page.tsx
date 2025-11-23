@@ -5,34 +5,41 @@ import Invitacion from "./components/Invitacion";
 import Logistica from "./components/Logistica";
 import ScrollSection from "./components/ScrollSection";
 
-export default function Home() {
+interface HomeProps {
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export default async function Home({ searchParams }: HomeProps) {
+    const params = await searchParams;
+    const showContent = params.ver === 'si';
+
+    if (!showContent) {
+        return (
+            <div className="w-full h-screen flex items-center justify-center">
+                <div className="text-center">
+                    <h1 className="text-2xl font-light text-gray-600">Site build in progress</h1>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
             {/*<ScrollSection>*/}
-            {/*    <Portada/>*/}
+                <Portada/>
             {/*</ScrollSection>*/}
             {/*<ScrollSection>*/}
-            {/*    <Invitacion/>*/}
+                <Invitacion/>
             {/*</ScrollSection>*/}
             {/*<ScrollSection>*/}
-            {/*    <Agenda/>*/}
+                <Agenda/>
             {/*</ScrollSection>*/}
             {/*<ScrollSection>*/}
-            {/*    <CodigoVestimenta/>*/}
+                <CodigoVestimenta/>
             {/*</ScrollSection>*/}
             {/*<ScrollSection>*/}
-            {/*    <Logistica/>*/}
+                <Logistica/>
             {/*</ScrollSection>*/}
-            <section className="h-screen w-full flex items-center justify-center bg-gradient-to-br from-green-100 to-emerald-100">
-                <div className="text-center">
-                    <h2 className="text-5xl font-bold text-gray-800 mb-6">
-                        Hola!
-                    </h2>
-                    <p className="text-xl text-gray-600">
-                        Estamos trabajando en esto todavía!
-                    </p>
-                </div>
-            </section>
         </div>
     );
 }
