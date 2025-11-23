@@ -155,7 +155,7 @@ body {
 }
 
 .embla__parallax {
-    border-radius: 1.8rem;
+    /*border-radius: 1.8rem;*/
     height: 100%;
     overflow: hidden;
 }

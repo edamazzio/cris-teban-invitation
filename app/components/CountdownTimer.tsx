@@ -61,7 +61,7 @@ export default function CountdownTimer({
     return (
         <div className="flex flex-col items-center justify-center py-8 px-4">
             {/* "FALTAN" text */}
-            <p className={`${im_fell.className} text-sm tracking-[0.3em] text-[#e8e4d8] mb-6`}>
+            <p className={`${im_fell.className} text-lg tracking-[0.3em] text-[#e8e4d8] mb-6`}>
                 FALTAN
             </p>
 
@@ -86,16 +86,16 @@ export default function CountdownTimer({
 
             {/* Labels */}
             <div className="flex items-center gap-8 md:gap-12">
-                <span className={`${im_fell.className} text-xs tracking-wider text-[#e8e4d8] w-12 text-center`}>
+                <span className={`${im_fell.className} text-lg tracking-wider text-[#e8e4d8] w-12 text-center`}>
                     {labels.days}
                 </span>
-                <span className={`${im_fell.className} text-xs tracking-wider text-[#e8e4d8] w-12 text-center`}>
+                <span className={`${im_fell.className} text-lg tracking-wider text-[#e8e4d8] w-12 text-center`}>
                     {labels.hours}
                 </span>
-                <span className={`${im_fell.className} text-xs tracking-wider text-[#e8e4d8] w-12 text-center`}>
+                <span className={`${im_fell.className} text-lg tracking-wider text-[#e8e4d8] w-12 text-center`}>
                     {labels.minutes}
                 </span>
-                <span className={`${im_fell.className} text-xs tracking-wider text-[#e8e4d8] w-12 text-center`}>
+                <span className={`${im_fell.className} text-lg tracking-wider text-[#e8e4d8] w-12 text-center`}>
                     {labels.seconds}
                 </span>
             </div>

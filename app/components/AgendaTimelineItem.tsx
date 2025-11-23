@@ -20,11 +20,11 @@ export default function AgendaTimelineItem({time, description}: AgendaTimelineIt
 
     return (
         <div>
-            <p className={`${pinyonScript.className} text-2xl text-[#626839] mb-1`}>
+            <p className={`${pinyonScript.className} text-3xl text-[#626839] mb-1`}>
                 {time}
             </p>
             {descriptions.map((desc, index) => (
-                <p key={index} className={`${im_fell.className} text-sm tracking-widest text-[#626839]`}>
+                <p key={index} className={`${im_fell.className} text-lg tracking-widest text-[#626839]`}>
                     {desc}
                 </p>
             ))}

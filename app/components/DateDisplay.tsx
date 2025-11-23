@@ -26,7 +26,7 @@ export default function DateDisplay({
     return (
         <div className="flex flex-col items-center justify-center py-8 px-4">
             {/* Month */}
-            <p className={`${im_fell.className} text-sm tracking-[0.3em] text-[#e8e4d8] mb-4`}>
+            <p className={`${im_fell.className} text-lg tracking-[0.3em] text-[#e8e4d8] mb-4`}>
                 {month}
             </p>
 
@@ -41,10 +41,10 @@ export default function DateDisplay({
 
             {/* Day of week and Year */}
             <div className="flex items-center gap-8">
-                <p className={`${im_fell.className} text-sm tracking-[0.3em] text-[#e8e4d8]`}>
+                <p className={`${im_fell.className} text-lg tracking-[0.3em] text-[#e8e4d8]`}>
                     {dayOfWeek}
                 </p>
-                <p className={`${im_fell.className} text-sm tracking-[0.3em] text-[#e8e4d8]`}>
+                <p className={`${im_fell.className} text-lg tracking-[0.3em] text-[#e8e4d8]`}>
                     {year}
                 </p>
             </div>
