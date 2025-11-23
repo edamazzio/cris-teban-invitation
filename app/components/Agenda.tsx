@@ -9,17 +9,17 @@ const pinyonScript = Pinyon_Script({
 export default function Agenda() {
     return (
         <section
-            className="h-[60vh] w-full flex items-center justify-center bg-[#f8f2ee] relative "
+            className="min-h-[60vh] w-full flex items-center justify-center bg-[#f8f2ee] relative py-8"
         >
-            <div className="w-11/12 mx-auto py-10 border-2 border-[#9ca085] rounded-[3rem] bg-[#f5efe8] relative">
+            <div className="w-11/12 max-w-2xl mx-auto py-6 sm:py-10 px-4 sm:px-6 border-2 border-[#9ca085] rounded-[2rem] sm:rounded-[3rem] bg-[#f5efe8] relative">
 
                 {/* Agenda Title */}
-                <h2 className={`${pinyonScript.className} text-4xl text-[#626839] text-center mb-12`}>
+                <h2 className={`${pinyonScript.className} text-3xl sm:text-4xl md:text-5xl text-[#626839] text-center mb-8 sm:mb-12`}>
                     Agenda
                 </h2>
 
                 {/* Schedule Items */}
-                <div className="space-y-8 text-center">
+                <div className="space-y-6 sm:space-y-8 text-center">
                     <AgendaTimelineItem time="10am" description="ceremonia"/>
                     <AgendaTimelineItem time="11am" description="Fotitos familiares"/>
                     <AgendaTimelineItem

@@ -20,48 +20,45 @@ const im_fell = IM_Fell_Double_Pica({
 export default function Invitacion() {
     const section = <>
         <section
-            className="w-full h-[100vh] flex flex-col items-center justify-start relative bg-[#f8f2ee]"
-            // className="w-full h-[100vh] flex flex-col items-center justify-start relative bg-[#000]"
+            className="w-full min-h-[100vh] flex flex-col items-center justify-start relative bg-[#f8f2ee] py-4"
         >
             {/* Image at the top */}
-            <div className="w-11/12 h-11/12 mt-4 flex items-center justify-center">
-                <Image
-                    src="/backgrounds/Invitacion/us2.jpg"
-                    alt="Portada background"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="w-auto h-full object-contain p-4"
-                    priority
-                    quality={100}
-                />
+            <div className="w-full max-w-md flex items-center justify-center px-4 mb-4">
+                <div className="relative w-full" style={{ aspectRatio: '3/4' }}>
+                    <Image
+                        src="/backgrounds/Invitacion/us2.jpg"
+                        alt="Portada background"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-contain"
+                        priority
+                        quality={100}
+                    />
+                </div>
             </div>
 
-            {/* Audio player */}
-
             {/* Content below the image */}
-            <div className="w-full flex flex-col items-center justify-center p-2">
-                <p className={`${pinyonScript.className} text-[#626839] text-xl/6 w-8/12 text-center`}>
-                    A donde tú vayas, yo iré; dondequiera que tú vivas, yo viviré <br/>
+            <div className="w-full flex flex-col items-center justify-center px-4 py-2">
+                <p className={`${pinyonScript.className} text-[#626839] text-lg sm:text-xl leading-relaxed w-11/12 sm:w-8/12 text-center`}>
+                    A donde tú vayas, yo iré; dondequiera que tú vivas, yo viviré
                 </p>
-                <p className={`${pinyonScript.className} text-[#626839] mt-4 text-xl/6 w-8/12 text-center`}>
+                <p className={`${pinyonScript.className} text-[#626839] mt-3 text-lg sm:text-xl w-11/12 sm:w-8/12 text-center`}>
                     Ruth 1:16
                 </p>
             </div>
-            <div className="w-full flex justify-center py-6 pb-10 mt-4">
+            
+            {/* Audio player */}
+            <div className="w-full flex justify-center px-4 py-4 mt-2">
                 <AudioPlayer
                     src="/audio/nuestra_cancion.mp3"
                     loop={false}
-                    className={`!bg-[#f8f2ee] !shadow-none !w-3/4`}
-                    header={<span className={`text-[#626839] flex justify-center text-sm ${im_fell.className}`}> Dale play a nuestra cancion</span>}
+                    className={`!bg-[#f8f2ee] !shadow-none w-full sm:!w-3/4 max-w-md`}
+                    header={<span className={`text-[#626839] flex justify-center text-xs sm:text-sm ${im_fell.className}`}> Dale play a nuestra cancion</span>}
                     customAdditionalControls={[]}
                     customVolumeControls={[]}
-                    // other props here
                 />
             </div>
         </section>
-
-
     </>;
     return section;
 }
