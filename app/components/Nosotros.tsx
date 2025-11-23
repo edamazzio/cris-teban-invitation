@@ -57,7 +57,7 @@ export default function Nosotros() {
 
                 {/* Content below the image */}
                 <div className="w-full flex flex-col items-center justify-center px-4 py-2">
-                    <p className={`${pinyonScript.className} text-[#626839] text-xl w-11/12 sm:w-8/12 text-center`}>
+                    <p className={`${pinyonScript.className} text-[#626839] text-xl w-8/12 sm:w-8/12 text-center`}>
                         A donde tú vayas, yo iré; dondequiera que tú vivas, yo viviré
                     </p>
                     <p className={`${pinyonScript.className} text-[#626839] mt-3 text-xl w-11/12 sm:w-8/12 text-center`}>

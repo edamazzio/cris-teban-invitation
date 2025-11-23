@@ -4,6 +4,7 @@ import Nosotros from "./components/Nosotros";
 import Logistica from "./components/Logistica";
 import DateCountdown from "./components/DateCountdown";
 import Invitacion from "./components/Invitacion";
+import FincaLaLucia from "./components/FincaLaLucia";
 
 interface HomeProps {
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
@@ -28,6 +29,7 @@ export default async function Home({searchParams}: HomeProps) {
             <Invitacion/>
             <Nosotros/>
             <DateCountdown/>
+            <FincaLaLucia/>
             <Agenda/>
             <CodigoVestimenta/>
             <Logistica/>
