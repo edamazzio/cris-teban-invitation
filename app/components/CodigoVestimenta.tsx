@@ -30,50 +30,47 @@ export default function CodigoVestimenta() {
             <div className="w-11/12 max-w-md mx-auto text-[#626839]">
                 {/* Title */}
                 <h2
-                    className={`${pinyonScript.className} text-5xl text-center mb-2`}
+                    className={`${pinyonScript.className} text-4xl text-center mb-2`}
                 >
                     Código de Vestimenta
                 </h2>
-                <p
-                    className={`${imFell.className} text-base text-center uppercase mb-8`}
-                >
-                    Elegancia de Día: fresco, veraniego y sin corbata.
+                <p className={`${imFell.className} text-xl text-center mb-8`}>
+                    Elegancia de Día
                 </p>
-
+                <div className="flex flex-col items-center gap-2">
+                    {/* First row - 6 colors */}
+                    <div className="flex justify-center gap-2">
+                        {paletteColors.slice(0, 6).map((color) => (
+                            <span
+                                key={color}
+                                className="w-7 h-7 rounded-full"
+                                style={{backgroundColor: color}}
+                            />
+                        ))}
+                    </div>
+                    {/* Second row - 5 colors */}
+                    <div className="flex justify-center gap-2">
+                        {paletteColors.slice(6, 11).map((color) => (
+                            <span
+                                key={color}
+                                className="w-7 h-7 rounded-full"
+                                style={{backgroundColor: color}}
+                            />
+                        ))}
+                    </div>
+                </div>
                 {/* Color palette */}
                 <div className="flex flex-col items-center mb-10">
-                    <h3 className={`${pinyonScript.className} text-3xl mb-1`}>
-                        Paleta de Color
-                    </h3>
+                    {/*<h3 className={`${pinyonScript.className} text-3xl mb-1`}>*/}
+                    {/*    Paleta de Color*/}
+                    {/*</h3>*/}
                     <p
-                        className={`${imFell.className} text-lg text-center mb-4`}
+                        className={`${imFell.className} text-lg text-center mt-6`}
                     >
-                        natural, fresca, tonos
-                        <br/>
-                        pastel apagado
+                        Fresco, veraniego y sin corbata. <br /> tonos naturales y
+                        pastel ténue
                     </p>
-                    <div className="flex flex-col items-center gap-2">
-                        {/* First row - 6 colors */}
-                        <div className="flex justify-center gap-2">
-                            {paletteColors.slice(0, 6).map((color) => (
-                                <span
-                                    key={color}
-                                    className="w-7 h-7 rounded-full"
-                                    style={{backgroundColor: color}}
-                                />
-                            ))}
-                        </div>
-                        {/* Second row - 5 colors */}
-                        <div className="flex justify-center gap-2">
-                            {paletteColors.slice(6, 11).map((color) => (
-                                <span
-                                    key={color}
-                                    className="w-7 h-7 rounded-full"
-                                    style={{backgroundColor: color}}
-                                />
-                            ))}
-                        </div>
-                    </div>
+
                 </div>
 
                 {/* Recommendations */}

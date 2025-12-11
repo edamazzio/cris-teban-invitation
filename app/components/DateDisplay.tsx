@@ -26,26 +26,26 @@ export default function DateDisplay({
     return (
         <div className="flex flex-col items-center justify-center py-8 px-4">
             {/* Month */}
-            <p className={`${im_fell.className} text-lg tracking-[0.3em] text-[#e8e4d8] mb-4`}>
-                {month}
+            <p className={`${im_fell.className} text-lg tracking-[0.249em] text-[#e8e4d8] mb-4`}>
+                {month?.toUpperCase()}
             </p>
 
             {/* Day with decorative lines */}
             <div className="flex items-center gap-4 mb-4">
                 <div className="w-24 h-[1px] bg-[#e8e4d8]"></div>
-                <p className={`${pinyonScript.className} text-6xl text-[#e8e4d8]`}>
+                <p className={`${im_fell.className} text-6xl text-[#e8e4d8]`}>
                     {day}
                 </p>
                 <div className="w-24 h-[1px] bg-[#e8e4d8]"></div>
             </div>
 
             {/* Day of week and Year */}
-            <div className="flex items-center gap-8">
-                <p className={`${im_fell.className} text-lg tracking-[0.3em] text-[#e8e4d8]`}>
-                    {dayOfWeek}
+            <div className="flex items-center gap-2">
+                <p className={`${im_fell.className} text-lg tracking-[0.249em] text-[#e8e4d8]`}>
+                    {dayOfWeek?.toUpperCase()}
                 </p>
-                <p className={`${im_fell.className} text-lg tracking-[0.3em] text-[#e8e4d8]`}>
-                    {year}
+                <p className={`${im_fell.className} text-2xl tracking-[0.2em] text-[#e8e4d8] mb-1`}>
+                    {year?.toUpperCase()}
                 </p>
             </div>
         </div>

@@ -43,7 +43,22 @@ export default function Nosotros() {
             <section
                 className="w-full min-h-[30vh] flex flex-col items-center justify-start relative bg-[#f8f2ee] py-4">
                 {/* Image at the top */}
-                <div className="w-full max-w-md flex items-center justify-center px-4 mb-4 mt-10">
+                {/* Audio player */}
+                <div className="w-full flex justify-center px-4 py-4 mt-2">
+                    <AudioPlayer
+                        src="/audio/nuestra_cancion.mp3"
+                        loop={false}
+                        className="!bg-[#f8f2ee] !shadow-none w-full sm:!w-3/4 max-w-md"
+                        header={
+                            <span className={`text-[#626839] flex justify-center text-xl ${im_fell.className}`}>
+                                Dale play a nuestra canción
+                            </span>
+                        }
+                        customAdditionalControls={[]}
+                        customVolumeControls={[]}
+                    />
+                </div>
+                <div className="w-full max-w-xl flex items-center justify-center px-4 mb-4 mt-10">
                     <div className="relative w-full">
                         <EmblaCarousel imgSources={[
                             "/us/us1.webp",
@@ -71,7 +86,7 @@ export default function Nosotros() {
 
                 {/* Content below the image */}
                 <div className="w-full flex flex-col items-center justify-center px-4 py-2">
-                    <p className={`${pinyonScript.className} text-[#626839] text-[1.77rem] w-8/12 sm:w-8/12 text-center`}>
+                    <p className={`${pinyonScript.className} text-[#626839] text-[1.77rem] w-8/12 sm:w-8/12 text-center leading-8`}>
                         A donde tú vayas, yo iré; dondequiera que tú vivas, yo viviré
                     </p>
                     <p className={`${pinyonScript.className} text-[#626839] mt-3 text-[1.77rem] w-11/12 sm:w-8/12 text-center`}>
@@ -79,21 +94,7 @@ export default function Nosotros() {
                     </p>
                 </div>
 
-                {/* Audio player */}
-                <div className="w-full flex justify-center px-4 py-4 mt-2">
-                    <AudioPlayer
-                        src="/audio/nuestra_cancion.mp3"
-                        loop={false}
-                        className="!bg-[#f8f2ee] !shadow-none w-full sm:!w-3/4 max-w-md"
-                        header={
-                            <span className={`text-[#626839] flex justify-center text-lg ${im_fell.className}`}>
-                                Dale play a nuestra cancion
-                            </span>
-                        }
-                        customAdditionalControls={[]}
-                        customVolumeControls={[]}
-                    />
-                </div>
+
             </section>
         </>
     );

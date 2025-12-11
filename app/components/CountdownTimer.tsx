@@ -67,19 +67,19 @@ export default function CountdownTimer({
 
             {/* Countdown numbers */}
             <div className="flex items-center gap-3 mb-4">
-                <span className="text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums">
+                <span className={`text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums ${im_fell.className}`}>
                     {formatNumber(timeLeft.days)}
                 </span>
                 <span className="text-4xl md:text-5xl font-light text-[#e8e4d8]">:</span>
-                <span className="text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums">
+                <span className={`text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums ${im_fell.className}`}>
                     {formatNumber(timeLeft.hours)}
                 </span>
                 <span className="text-4xl md:text-5xl font-light text-[#e8e4d8]">:</span>
-                <span className="text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums">
+                <span className={`text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums ${im_fell.className}`}>
                     {formatNumber(timeLeft.minutes)}
                 </span>
                 <span className="text-4xl md:text-5xl font-light text-[#e8e4d8]">:</span>
-                <span className="text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums">
+                <span className={`text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums ${im_fell.className}`}>
                     {formatNumber(timeLeft.seconds)}
                 </span>
             </div>

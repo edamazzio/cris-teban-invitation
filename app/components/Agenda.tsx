@@ -34,7 +34,7 @@ export default function Agenda() {
 
                 {/* Schedule Items */}
                 <div className="space-y-8 text-center">
-                    <AgendaTimelineItem time="10am" description="ceremonia"/>
+                    <AgendaTimelineItem time="10am" description="Ceremonia"/>
                     <AgendaTimelineItem time="11am" description="Fotitos familiares"/>
                     <AgendaTimelineItem
                         time="12md - 3pm"
