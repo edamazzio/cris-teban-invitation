@@ -12,7 +12,7 @@ export default async function Home() {
 
     return (
         <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
-            <Portada />
+            <Portada/>
             <EstasInvitado/>
             <Invitacion/>
             <Nosotros/>

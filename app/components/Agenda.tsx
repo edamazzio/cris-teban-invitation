@@ -1,11 +1,6 @@
 import AgendaTimelineItem from "./AgendaTimelineItem";
-import {Pinyon_Script} from "next/font/google";
 import Image from "next/image";
 
-const pinyonScript = Pinyon_Script({
-    weight: "400",
-    subsets: ["latin"]
-});
 
 export default function Agenda() {
     return (
@@ -28,7 +23,7 @@ export default function Agenda() {
                 </div>
 
                 {/* Agenda Title */}
-                <h2 className={`${pinyonScript.className} text-5xl text-[#626839] text-center mb-12`}>
+                <h2 className={`pinyon-heading text-5xl text-[#626839] text-center mb-12`}>
                     Agenda
                 </h2>
 

@@ -1,12 +1,6 @@
 'use client';
 
 import {useEffect, useState} from 'react';
-import {IM_Fell_Double_Pica} from "next/font/google";
-
-const im_fell = IM_Fell_Double_Pica({
-    weight: "400",
-    subsets: ["latin"]
-});
 
 interface CountdownTimerProps {
     targetDate: Date;
@@ -59,45 +53,77 @@ export default function CountdownTimer({
     const formatNumber = (num: number) => String(num).padStart(2, '0');
 
     return (
-        <div className="flex flex-col items-center justify-center py-8 px-4">
+        <div className="flex flex-col items-center justify-center py-8 px-4 mb-8">
             {/* "FALTAN" text */}
-            <p className={`${im_fell.className} text-lg tracking-[0.3em] text-[#e8e4d8] mb-6`}>
+            <p className="im-fell-text tracking-[0.249em] text-[#e8e4d8] mb-6">
                 FALTAN
             </p>
 
-            {/* Countdown numbers */}
-            <div className="flex items-center gap-3 mb-4">
-                <span className={`text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums ${im_fell.className}`}>
-                    {formatNumber(timeLeft.days)}
-                </span>
-                <span className="text-4xl md:text-5xl font-light text-[#e8e4d8]">:</span>
-                <span className={`text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums ${im_fell.className}`}>
-                    {formatNumber(timeLeft.hours)}
-                </span>
-                <span className="text-4xl md:text-5xl font-light text-[#e8e4d8]">:</span>
-                <span className={`text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums ${im_fell.className}`}>
-                    {formatNumber(timeLeft.minutes)}
-                </span>
-                <span className="text-4xl md:text-5xl font-light text-[#e8e4d8]">:</span>
-                <span className={`text-5xl md:text-6xl font-light text-[#e8e4d8] tabular-nums ${im_fell.className}`}>
-                    {formatNumber(timeLeft.seconds)}
-                </span>
-            </div>
+            {/* Countdown numbers and labels */}
+            <div className="flex items-end gap-3">
+                {/* Days */}
+                <div className="flex flex-col items-center">
+                    <span className="im-fell-text text-6xl! font-light text-[#e8e4d8] tabular-nums mb-2">
+                        {formatNumber(timeLeft.days)}
+                    </span>
+                    <span className="im-fell-text text-xl! tracking-wider text-[#e8e4d8] text-center mt-3">
+                        {labels.days}
+                    </span>
+                </div>
 
-            {/* Labels */}
-            <div className="flex items-center gap-8 md:gap-12">
-                <span className={`${im_fell.className} text-lg tracking-wider text-[#e8e4d8] w-12 text-center`}>
-                    {labels.days}
-                </span>
-                <span className={`${im_fell.className} text-lg tracking-wider text-[#e8e4d8] w-12 text-center`}>
-                    {labels.hours}
-                </span>
-                <span className={`${im_fell.className} text-lg tracking-wider text-[#e8e4d8] w-12 text-center`}>
-                    {labels.minutes}
-                </span>
-                <span className={`${im_fell.className} text-lg tracking-wider text-[#e8e4d8] w-12 text-center`}>
-                    {labels.seconds}
-                </span>
+                {/* Colon */}
+                <div className="flex flex-col items-center">
+                    <span className="text-4xl md:text-5xl font-light text-[#e8e4d8] mb-2">:</span>
+                    <span className="im-fell-text text-3xl! tracking-wider text-[#e8e4d8] text-center opacity-0 mt-3">
+                        :
+                    </span>
+                </div>
+
+                {/* Hours */}
+                <div className="flex flex-col items-center">
+                    <span className="im-fell-text text-6xl! font-light text-[#e8e4d8] tabular-nums mb-2">
+                        {formatNumber(timeLeft.hours)}
+                    </span>
+                    <span className="im-fell-text text-xl! tracking-wider text-[#e8e4d8] text-center mt-3">
+                        {labels.hours}
+                    </span>
+                </div>
+
+                {/* Colon */}
+                <div className="flex flex-col items-center">
+                    <span className="text-4xl md:text-5xl font-light text-[#e8e4d8] mb-2">:</span>
+                    <span className="im-fell-text text-3xl! tracking-wider text-[#e8e4d8] text-center opacity-0 mt-3">
+                        :
+                    </span>
+                </div>
+
+                {/* Minutes */}
+                <div className="flex flex-col items-center">
+                    <span className="im-fell-text text-6xl! font-light text-[#e8e4d8] tabular-nums mb-2">
+                        {formatNumber(timeLeft.minutes)}
+                    </span>
+                    <span className="im-fell-text text-xl! tracking-wider text-[#e8e4d8] text-center mt-3">
+                        {labels.minutes}
+                    </span>
+                </div>
+
+                {/* Colon */}
+                <div className="flex flex-col items-center">
+                    <span className="text-4xl md:text-5xl font-light text-[#e8e4d8] mb-2">:</span>
+                    <span className="im-fell-text text-3xl! tracking-wider text-[#e8e4d8] text-center opacity-0 mt-3">
+                        :
+                    </span>
+                </div>
+
+                {/* Seconds */}
+                <div className="flex flex-col items-center">
+                    <span className="im-fell-text text-6xl! font-light text-[#e8e4d8] tabular-nums mb-2">
+                        {formatNumber(timeLeft.seconds)}
+                    </span>
+                    <span className="im-fell-text text-xl! tracking-wider text-[#e8e4d8] text-center mt-3">
+                        {labels.seconds}
+                    </span>
+                </div>
             </div>
         </div>
     );

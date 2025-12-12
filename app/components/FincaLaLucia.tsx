@@ -1,17 +1,6 @@
 'use client';
 
-import {IM_Fell_Double_Pica, Pinyon_Script} from "next/font/google";
 import Image from "next/image";
-
-const pinyonScript = Pinyon_Script({
-    weight: "400",
-    subsets: ["latin"]
-});
-
-const im_fell = IM_Fell_Double_Pica({
-    weight: "400",
-    subsets: ["latin"]
-});
 
 export default function FincaLaLucia() {
     // Coordinates for Finca La Lucía (Costa Rica)
@@ -22,30 +11,17 @@ export default function FincaLaLucia() {
 
     return (
         <section
-            className="min-h-[55vh] w-full flex flex-col items-center justify-center bg-[#f8f2ee] relative py-12 px-4">
+            className="min-h-[15vh] w-full flex flex-col items-center justify-center bg-[#626839] relative pb-15 px-4">
             <div className="w-11/12 max-w-md mx-">
                 {/* Title */}
-                <h2 className={`${pinyonScript.className} text-5xl text-[#626839] text-center mb-3`}>
+                <h2 className={`im-fell-text text-5xl! text-[#e8e4d8] text-center mb-3`}>
                     Finca La Lucía
                 </h2>
 
                 {/* Subtitle */}
-                <p className={`${im_fell.className} text-lg  text-[#626839] text-center mb-8`}>
+                <p className="im-fell-text text-[#e8e4d8] text-center mb-8">
                     Pico Blanco, Escazú, San José
                 </p>
-
-                {/* Map Image */}
-                <div className="w-full bg-white 2xl shadow-lg overflow-hidden mb-6">
-                    <div className="relative w-full aspect-[3/4]">
-                        <Image
-                            src="/pico_blanco.jpg"
-                            alt="Finca La Lucía Location Map"
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 1200px"
-                        />
-                    </div>
-                </div>
 
                 {/* Navigation Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
@@ -54,22 +30,21 @@ export default function FincaLaLucia() {
                         href={googleMapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full sm:w-auto group"
+                        className="w-full sm:w-auto"
                     >
                         <button
-                            className="w-full sm:w-auto px-5 py-2.5 bg-transparent border-1 border-[#626839] hover:bg-[#626839] text-[#626839] hover:text-[#f8f2ee] rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group">
+                            className="w-full sm:w-auto px-5 py-2.5 bg-transparent border-1 border-[#e8e4d8] hover:bg-[#e8e4d8] text-[#e8e4d8] hover:text-[#626839] rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group">
                             {/* Google Maps Icon */}
-                            <Image
-                                src="/maps.svg"
-                                alt="Maps"
-                                width={16}
-                                height={16}
-                                className="w-6 h-6 brightness-0 saturate-100 contrast-[0.6] opacity-70 group-hover:brightness-100 group-hover:opacity-100"
-                                style={{
-                                    filter: 'invert(37%) sepia(10%) saturate(1264%) hue-rotate(58deg) brightness(94%) contrast(89%)'
-                                }}
-                            />
-                            <span className={`${im_fell.className} text-lg tracking-wider`}>
+                            <span className="w-6 h-6 flex items-center justify-center [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(9%)_saturate(295%)_hue-rotate(350deg)_brightness(95%)_contrast(88%)] group-hover:[filter:brightness(0)_saturate(100%)_invert(37%)_sepia(10%)_saturate(1264%)_hue-rotate(58deg)_brightness(94%)_contrast(89%)] transition-all duration-300">
+                                <Image
+                                    src="/maps.svg"
+                                    alt="Maps"
+                                    width={24}
+                                    height={24}
+                                    className="w-full h-full"
+                                />
+                            </span>
+                            <span className="im-fell-text tracking-wider">
                                 Abrir en Google Maps
                             </span>
                         </button>
@@ -80,22 +55,21 @@ export default function FincaLaLucia() {
                         href={wazeUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full sm:w-auto group"
+                        className="w-full sm:w-auto"
                     >
                         <button
-                            className="w-full sm:w-auto px-5 py-2.5 bg-transparent border-1 border-[#626839] hover:bg-[#626839] text-[#626839] hover:text-[#f8f2ee] rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group">
+                            className="w-full sm:w-auto px-5 py-2.5 bg-transparent border-1 border-[#e8e4d8] hover:bg-[#e8e4d8] text-[#e8e4d8] hover:text-[#626839] rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group">
                             {/* Waze Icon */}
-                            <Image
-                                src="/waze.svg"
-                                alt="Waze"
-                                width={16}
-                                height={16}
-                                className="w-6 h-6 brightness-0 saturate-100 group-hover:brightness-100"
-                                style={{
-                                    filter: 'invert(37%) sepia(10%) saturate(1264%) hue-rotate(58deg) brightness(94%) contrast(89%)'
-                                }}
-                            />
-                            <span className={`${im_fell.className} text-lg tracking-wider`}>
+                            <span className="w-6 h-6 flex items-center justify-center [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(9%)_saturate(295%)_hue-rotate(350deg)_brightness(95%)_contrast(88%)] group-hover:[filter:brightness(0)_saturate(100%)_invert(37%)_sepia(10%)_saturate(1264%)_hue-rotate(58deg)_brightness(94%)_contrast(89%)] transition-all duration-300">
+                                <Image
+                                    src="/waze.svg"
+                                    alt="Waze"
+                                    width={24}
+                                    height={24}
+                                    className="w-full h-full"
+                                />
+                            </span>
+                            <span className="im-fell-text tracking-wider">
                                 Abrir en Waze
                             </span>
                         </button>

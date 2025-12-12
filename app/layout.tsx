@@ -1,6 +1,6 @@
 import "./globals.css";
 import type {Metadata} from "next";
-import {Geist, Geist_Mono} from "next/font/google";
+import {Geist, Geist_Mono, IM_Fell_Double_Pica, Pinyon_Script} from "next/font/google";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -9,6 +9,18 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
+    subsets: ["latin"],
+});
+
+const pinyonScript = Pinyon_Script({
+    variable: "--font-pinyon-script",
+    weight: "400",
+    subsets: ["latin"],
+});
+
+const imFell = IM_Fell_Double_Pica({
+    variable: "--font-im-fell",
+    weight: "400",
     subsets: ["latin"],
 });
 
@@ -25,7 +37,7 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+            className={`${geistSans.variable} ${geistMono.variable} ${pinyonScript.variable} ${imFell.variable} antialiased`}
         >
         {children}
         </body>

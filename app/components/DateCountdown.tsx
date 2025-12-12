@@ -7,17 +7,18 @@ export default function DateCountdown() {
 
     return (
         <section className="min-h-[30vh] w-full flex flex-col items-center justify-center bg-[#f8f2ee] relative">
-            <div className="w-full h-full bg-[#626839] flex flex-col items-center justify-center py-6">
+            <div className="w-full h-full bg-[#626839] flex flex-col items-center justify-center py-8">
                 {/* Date Display */}
                 <DateDisplay
-                    month="Sábado"
+                    month="Febrero"
                     day="21"
                     year="2026"
-                    dayOfWeek="Febrero"
+                    dayOfWeek="Sábado"
+                    time="10 am"
                 />
 
                 {/* Countdown Timer */}
-                <div className="">
+                <div className="w-full">
                     <CountdownTimer
                         targetDate={weddingDate}
                         labels={{

@@ -1,14 +1,3 @@
-import {IM_Fell_Double_Pica, Pinyon_Script} from "next/font/google";
-
-const pinyonScript = Pinyon_Script({
-    weight: "400",
-    subsets: ["latin"]
-});
-
-const im_fell = IM_Fell_Double_Pica({
-    weight: "400",
-    subsets: ["latin"]
-});
 
 interface AgendaTimelineItemProps {
     time: string;
@@ -20,11 +9,11 @@ export default function AgendaTimelineItem({time, description}: AgendaTimelineIt
 
     return (
         <div>
-            <p className={`${pinyonScript.className} text-3xl text-[#626839] mb-1`}>
+            <p className={`pinyon-heading text-3xl text-[#626839] mb-1`}>
                 {time}
             </p>
             {descriptions.map((desc, index) => (
-                <p key={index} className={`${im_fell.className} text-lg tracking-widest text-[#626839]`}>
+                <p key={index} className="im-fell-text tracking-widest text-[#626839]">
                     {desc}
                 </p>
             ))}

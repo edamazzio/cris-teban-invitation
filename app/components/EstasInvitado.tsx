@@ -1,15 +1,3 @@
-import AgendaTimelineItem from "./AgendaTimelineItem";
-import {IM_Fell_Double_Pica, Pinyon_Script} from "next/font/google";
-import Image from "next/image";
-
-const pinyonScript = Pinyon_Script({
-    weight: "400",
-    subsets: ["latin"]
-});
-const imFell = IM_Fell_Double_Pica({
-    weight: "400",
-    subsets: ["latin"]
-});
 
 export default function EstasInvitado() {
     return (
@@ -21,10 +9,11 @@ export default function EstasInvitado() {
 
 
                 {/* Agenda Title */}
-                <h2 className={`${pinyonScript.className} text-5xl text-[#626839] text-center mb-1`}>
+                <h2 className={`pinyon-heading text-5xl text-[#626839] text-center mb-1`}>
                     ¡Nos casamos, y estás invitado!
                 </h2>
-                <p className={`${imFell.className} max-w-md mx-auto text-2xl text-[#626839] text-center mt-2`}>Nos llena de felicidad contar con tu compañía el día de nuestra boda</p>
+                <p className="im-fell-text max-w-md mx-auto text-[#626839] text-center mt-2">Nos llena
+                    de felicidad contar con tu compañía el día de nuestra boda</p>
 
             </div>
         </section>

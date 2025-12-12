@@ -1,14 +1,3 @@
-import {IM_Fell_Double_Pica, Pinyon_Script} from "next/font/google";
-
-const pinyonScript = Pinyon_Script({
-    weight: "400",
-    subsets: ["latin"]
-});
-
-const imFell = IM_Fell_Double_Pica({
-    weight: "400",
-    subsets: ["latin"]
-});
 
 const paletteColors = [
     "#ece3d4",
@@ -30,11 +19,11 @@ export default function CodigoVestimenta() {
             <div className="w-11/12 max-w-md mx-auto text-[#626839]">
                 {/* Title */}
                 <h2
-                    className={`${pinyonScript.className} text-4xl text-center mb-2`}
+                    className={`pinyon-heading text-4xl text-center mb-2`}
                 >
                     Código de Vestimenta
                 </h2>
-                <p className={`${imFell.className} text-xl text-center mb-8`}>
+                <p className="im-fell-text text-center mb-8">
                     Elegancia de Día
                 </p>
                 <div className="flex flex-col items-center gap-2">
@@ -61,13 +50,11 @@ export default function CodigoVestimenta() {
                 </div>
                 {/* Color palette */}
                 <div className="flex flex-col items-center mb-10">
-                    {/*<h3 className={`${pinyonScript.className} text-3xl mb-1`}>*/}
+                    {/*<h3 className={`pinyon-heading text-3xl mb-1`}>*/}
                     {/*    Paleta de Color*/}
                     {/*</h3>*/}
-                    <p
-                        className={`${imFell.className} text-lg text-center mt-6`}
-                    >
-                        Fresco, veraniego y sin corbata. <br /> tonos naturales y
+                    <p className="im-fell-text text-center mt-6">
+                        Fresco, veraniego y sin corbata. <br/> tonos naturales y
                         pastel ténue
                     </p>
 
@@ -75,14 +62,10 @@ export default function CodigoVestimenta() {
 
                 {/* Recommendations */}
                 <div className="mb-8">
-                    <h4
-                        className={`${imFell.className} text-lg text-center uppercase mb-4`}
-                    >
+                    <h4 className="im-fell-text text-center uppercase mb-4">
                         Recomendaciones
                     </h4>
-                    <ul
-                        className={`${imFell.className} text-lg leading-relaxed space-y-2 list-disc list-inside`}
-                    >
+                    <ul className="im-fell-text leading-relaxed space-y-2 list-disc list-inside">
                         <li>
                             <span className="italic">Mujeres:</span> vestidos ligeros, conjuntos elegantes
                             de dos piezas.
@@ -106,14 +89,10 @@ export default function CodigoVestimenta() {
 
                 {/* Avoid section */}
                 <div className="mb-6">
-                    <h4
-                        className={`${imFell.className} text-lg text-center uppercase mb-4`}
-                    >
+                    <h4 className="im-fell-text text-center uppercase mb-4">
                         Por favor evitar
                     </h4>
-                    <ul
-                        className={`${imFell.className} text-lg leading-relaxed space-y-2 list-disc list-inside`}
-                    >
+                    <ul className="im-fell-text leading-relaxed space-y-2 list-disc list-inside">
                         <li>
                             Mujeres vestir de blanco (es decir, no vestir de blanco. Solo la novia).
                         </li>
@@ -131,7 +110,7 @@ export default function CodigoVestimenta() {
 
                 {/* Monogram */}
                 <div className="mt-8 flex justify-center">
-                    <span className={`${pinyonScript.className} text-3xl text-[#626839]`}>
+                    <span className={`pinyon-heading text-3xl text-[#626839]`}>
                         E &amp; C
                     </span>
                 </div>

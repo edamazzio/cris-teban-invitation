@@ -1,53 +1,49 @@
-import {IM_Fell_Double_Pica, Pinyon_Script} from "next/font/google";
-
-const im_fell = IM_Fell_Double_Pica({
-    weight: "400",
-    subsets: ["latin"]
-});
-
-const pinyonScript = Pinyon_Script({
-    weight: "400",
-    subsets: ["latin"]
-});
-
 interface DateDisplayProps {
-    month?: string;
-    day?: string;
-    year?: string;
-    dayOfWeek?: string;
+    month?: string,
+    day?: string,
+    year?: string,
+    dayOfWeek?: string,
+    time?: string
 }
 
 export default function DateDisplay({
                                         month = "NOVIEMBRE",
                                         day = "14",
                                         year = "2025",
-                                        dayOfWeek = "VIERNES"
+                                        dayOfWeek = "VIERNES",
+                                        time = "10am"
                                     }: DateDisplayProps) {
     return (
-        <div className="flex flex-col items-center justify-center py-8 px-4">
-            {/* Month */}
-            <p className={`${im_fell.className} text-lg tracking-[0.249em] text-[#e8e4d8] mb-4`}>
+        <div className="flex flex-col items-center justify-center py-8 px-4 mb-8">
+            {/* Month - centered on top */}
+            <p className="im-fell-text tracking-[0.4em] text-[#e8e4d8] mb-2">
                 {month?.toUpperCase()}
             </p>
 
-            {/* Day with decorative lines */}
-            <div className="flex items-center gap-4 mb-4">
-                <div className="w-24 h-[1px] bg-[#e8e4d8]"></div>
-                <p className={`${im_fell.className} text-6xl text-[#e8e4d8]`}>
+            {/* Day of week, Day, and Year in a row */}
+            <div className="flex items-center justify-center gap-6">
+                {/* Day of week with bar below */}
+                <div className="flex flex-col w-40 h-20 justify-center items-center border-y-[1px] border-[#e8e4d8]">
+                    <p className="im-fell-text tracking-[0.3em] text-[#e8e4d8]">
+                        {dayOfWeek?.toUpperCase()}
+                    </p>
+                </div>
+
+                {/* Day - big in center */}
+                <p className="im-fell-text text-8xl! text-[#e8e4d8] mx-8 mb-4">
                     {day}
                 </p>
-                <div className="w-24 h-[1px] bg-[#e8e4d8]"></div>
-            </div>
 
-            {/* Day of week and Year */}
-            <div className="flex items-center gap-2">
-                <p className={`${im_fell.className} text-lg tracking-[0.249em] text-[#e8e4d8]`}>
-                    {dayOfWeek?.toUpperCase()}
-                </p>
-                <p className={`${im_fell.className} text-2xl tracking-[0.2em] text-[#e8e4d8] mb-1`}>
-                    {year?.toUpperCase()}
-                </p>
+                {/* Year with bar below */}
+                <div className="flex flex-col w-40 h-20 justify-center items-center border-y-[1px] border-[#e8e4d8]">
+                    <p className="im-fell-text text-3xl! tracking-[0.2em] text-[#e8e4d8]">
+                        {year}
+                    </p>
+                </div>
             </div>
+            <p className="im-fell-text text-4xl! tracking-[0.1em] text-[#e8e4d8] mt-2">
+                {time}
+            </p>
         </div>
     );
 }
