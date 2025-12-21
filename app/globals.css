@@ -293,7 +293,7 @@ body {
 
 .pinyon-heading {
     font-family: var(--font-pinyon-script);
-    font-size: 3.75rem; /* text-6xl */
+    font-size: 3.125rem!important; /* text-6xl */
     line-height: 1;
     font-weight: 400;
 }
@@ -303,4 +303,42 @@ body {
     font-size: 1.5rem; /* text-2xl */
     line-height: 2rem;
     font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.im-fell-heading {
+    font-family: var(--font-im-fell);
+    font-size: 1.75rem!important;
+    line-height: 2rem;
+    font-weight: 400;
+}
+
+/* Recommendations collapsible section */
+.recommendations-details {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.recommendations-chevron {
+    width: 1rem;
+    height: 1rem;
+    transition: transform 300ms ease-in-out;
+}
+
+.recommendations-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms ease-in-out;
+}
+
+.recommendations-content > div {
+    overflow: hidden;
+}
+
+details[open] .recommendations-chevron {
+    transform: rotate(180deg);
+}
+
+details[open] .recommendations-content {
+    grid-template-rows: 1fr;
 }

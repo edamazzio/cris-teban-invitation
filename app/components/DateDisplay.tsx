@@ -14,7 +14,7 @@ export default function DateDisplay({
                                         time = "10am"
                                     }: DateDisplayProps) {
     return (
-        <div className="flex flex-col items-center justify-center py-8 px-4 mb-8">
+        <div className="flex flex-col items-center justify-center py-8 mb-2 w-full">
             {/* Month - centered on top */}
             <p className="im-fell-text tracking-[0.4em] text-[#e8e4d8] mb-2">
                 {month?.toUpperCase()}

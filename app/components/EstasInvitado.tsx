@@ -12,9 +12,9 @@ export default function EstasInvitado() {
                 <h2 className={`pinyon-heading text-5xl text-[#626839] text-center mb-1`}>
                     ¡Nos casamos, y estás invitado!
                 </h2>
-                <p className="im-fell-text max-w-md mx-auto text-[#626839] text-center mt-2">Nos llena
-                    de felicidad contar con tu compañía el día de nuestra boda</p>
-
+                <p className="im-fell-text max-w-sm mx-auto text-[#626839] text-center mt-2">
+                     Nos llena de alegría que nos acompañes en este día tan especial.
+                </p>
             </div>
         </section>
     );

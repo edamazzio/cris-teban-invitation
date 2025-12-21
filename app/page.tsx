@@ -6,6 +6,7 @@ import DateCountdown from "./components/DateCountdown";
 import Invitacion from "./components/Invitacion";
 import FincaLaLucia from "./components/FincaLaLucia";
 import Portada from "./components/Portada";
+import SecondGallery from "./components/SecondGallery";
 
 
 export default async function Home() {
@@ -17,8 +18,8 @@ export default async function Home() {
             <Invitacion/>
             <Nosotros/>
             <DateCountdown/>
-            <FincaLaLucia/>
             <Agenda/>
+            <SecondGallery />
             <CodigoVestimenta/>
         </div>
     );

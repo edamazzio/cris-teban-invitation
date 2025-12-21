@@ -53,7 +53,7 @@ export default function CountdownTimer({
     const formatNumber = (num: number) => String(num).padStart(2, '0');
 
     return (
-        <div className="flex flex-col items-center justify-center py-8 px-4 mb-8">
+        <div className="flex flex-col items-center justify-center py-8 mb-2 w-full">
             {/* "FALTAN" text */}
             <p className="im-fell-text tracking-[0.249em] text-[#e8e4d8] mb-6">
                 FALTAN

@@ -8,7 +8,7 @@ const TWEEN_FACTOR_BASE = 0.2
 
 type PropType = {
     imgSources: string[]
-    options?: EmblaOptionsType
+    options?: EmblaOptionsType & {hideDotButtons?: boolean}
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
@@ -118,17 +118,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled}/>
                 </div>
 
-                <div className="embla__dots">
-                    {scrollSnaps.map((_, index) => (
-                        <DotButton
-                            key={index}
-                            onClick={() => onDotButtonClick(index)}
-                            className={'embla__dot'.concat(
-                                index === selectedIndex ? ' embla__dot--selected' : ''
-                            )}
-                        />
-                    ))}
-                </div>
+                {!options?.hideDotButtons &&
+                    <div className="embla__dots">
+                        {scrollSnaps.map((_, index) => (
+                            <DotButton
+                                key={index}
+                                onClick={() => onDotButtonClick(index)}
+                                className={'embla__dot'.concat(
+                                    index === selectedIndex ? ' embla__dot--selected' : ''
+                                )}
+                            />
+                        ))}
+                    </div>}
+
             </div>
         </div>
     )

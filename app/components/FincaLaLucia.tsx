@@ -10,9 +10,7 @@ export default function FincaLaLucia() {
     const wazeUrl = `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`;
 
     return (
-        <section
-            className="min-h-[15vh] w-full flex flex-col items-center justify-center bg-[#626839] relative pb-15 px-4">
-            <div className="w-11/12 max-w-md mx-">
+        <div className="flex flex-col items-center justify-center py-8 mb-2 w-full">
                 {/* Title */}
                 <h2 className={`im-fell-text text-5xl! text-[#e8e4d8] text-center mb-3`}>
                     Finca La Lucía
@@ -20,20 +18,20 @@ export default function FincaLaLucia() {
 
                 {/* Subtitle */}
                 <p className="im-fell-text text-[#e8e4d8] text-center mb-8">
-                    Pico Blanco, Escazú, San José
+                    Pico Blanco, Escazú
                 </p>
 
                 {/* Navigation Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                <div className="flex flex-col gap-3 justify-center items-center w-full">
                     {/* Google Maps Button */}
                     <a
                         href={googleMapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full sm:w-auto"
+                        className="w-full"
                     >
                         <button
-                            className="w-full sm:w-auto px-5 py-2.5 bg-transparent border-1 border-[#e8e4d8] hover:bg-[#e8e4d8] text-[#e8e4d8] hover:text-[#626839] rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group">
+                            className="w-full px-5 py-2.5 bg-transparent border-1 border-[#e8e4d8] hover:bg-[#e8e4d8] text-[#e8e4d8] hover:text-[#626839] rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group">
                             {/* Google Maps Icon */}
                             <span className="w-6 h-6 flex items-center justify-center [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(9%)_saturate(295%)_hue-rotate(350deg)_brightness(95%)_contrast(88%)] group-hover:[filter:brightness(0)_saturate(100%)_invert(37%)_sepia(10%)_saturate(1264%)_hue-rotate(58deg)_brightness(94%)_contrast(89%)] transition-all duration-300">
                                 <Image
@@ -55,7 +53,7 @@ export default function FincaLaLucia() {
                         href={wazeUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full sm:w-auto"
+                        className="w-full"
                     >
                         <button
                             className="w-full sm:w-auto px-5 py-2.5 bg-transparent border-1 border-[#e8e4d8] hover:bg-[#e8e4d8] text-[#e8e4d8] hover:text-[#626839] rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group">
@@ -77,6 +75,5 @@ export default function FincaLaLucia() {
                 </div>
 
             </div>
-        </section>
     );
 }

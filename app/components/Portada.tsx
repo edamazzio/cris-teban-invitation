@@ -7,7 +7,7 @@ export default function Portada() {
     const [imageLoaded, setImageLoaded] = useState(false);
 
     return (
-        <section className="h-[70vh] w-full flex flex-col items-center justify-center relative">
+        <section className="h-[95vh] w-full flex flex-col items-center justify-center relative">
             {/* Blurred background - shown initially */}
             <Image
                 src="/backgrounds/background_blurred.webp"
@@ -30,12 +30,17 @@ export default function Portada() {
             />
             <div
                 className="text-center absolute top-[30%] md:top-[25%] left-1/2 -translate-x-1/2 z-10 transition-all duration-500 w-full">
-                <p className="im-fell-text text-amber-50 mb-1 italic">
+                <p className="im-fell-text text-amber-50 mb-8 italic">
                     Wedding Day
                 </p>
-                <h1 className={`text-6xl  font-bold text-amber-50 mb-4 pinyon-heading`}>
-                    Cristel Leitón <br/>& <br/> Esteban Damazio
+                <h1 className={`font-bold text-amber-50 mb-4 pinyon-heading flex flex-col`}>
+                    <span className={`mb-0 leading-9`}>Cristel Leitón</span>
+                    <span className={`my-1 leading-9`}>&</span>
+                    <span className={`mb-0 leading-9`}>Esteban Damazio</span>
                 </h1>
+                <h2 className={`im-fell-heading text-amber-50 mt-6`}>
+                    21 | 02 | 2026
+                </h2>
                 {/*<p className={`text-sm md:text-m text-amber-50 ${im_fell.className}`}>*/}
                 {/*    21 | 02 | 2026*/}
                 {/*    <br />*/}
