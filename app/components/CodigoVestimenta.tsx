@@ -60,24 +60,16 @@ export default function CodigoVestimenta() {
                         </div>
                     </div>
                     {/* Color palette */}
-                    <div className="flex flex-col items-center mb-14">
+                    <div className="flex flex-col items-center mb-0">
                         {/*<h3 className={`pinyon-heading text-3xl mb-1`}>*/}
                         {/*    Paleta de Color*/}
                         {/*</h3>*/}
-                        <p className="im-fell-text text-center mt-6">
-                            Formal, fresco, elegante, veraniego, sin corbata. <br/> Tonos naturales y
+                        <p className="im-fell-text text-center mt-8">
+                            Semi-formal. Fresco, elegante, veraniego, sin corbata. <br/> Tonos naturales y
                             pastel ténue
                         </p>
 
                     </div>
-
-                    <a
-                        data-pin-do="embedBoard"
-                        data-pin-board-width="500"
-                        data-pin-scale-height="500"
-                        data-pin-scale-width="80"
-                        href="https://www.pinterest.com/cleitn/boda-tebancris-c%C3%B3digo-de-vestimenta/"
-                    />
 
                     {/* Recommendations & Avoid */}
                     <div className="flex flex-col gap-3 py-14">
@@ -187,6 +179,15 @@ export default function CodigoVestimenta() {
                             </div>
                         </div>
                     </div>
+
+                    <a
+                        data-pin-do="embedBoard"
+                        data-pin-board-width="500"
+                        data-pin-scale-height="500"
+                        data-pin-scale-width="80"
+                        href="https://www.pinterest.com/cleitn/boda-tebancris-c%C3%B3digo-de-vestimenta/"
+                    />
+
 
                     {/* Monogram */}
                     <div className="mt-8 flex justify-center">
