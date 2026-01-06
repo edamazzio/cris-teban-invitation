@@ -1,7 +1,7 @@
 'use client';
 
 import Script from 'next/script'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 const paletteColors = [
@@ -22,11 +22,40 @@ export default function CodigoVestimenta() {
     const [showRecommendations, setShowRecommendations] = useState(false)
     const [showAvoid, setShowAvoid] = useState(false)
 
+    useEffect(() => {
+        const handleHashChange = () => {
+            const hash = window.location.hash.replace('#', '');
+            if (!hash) return;
+
+            if (hash === 'recomendaciones') {
+                setShowRecommendations(true);
+            }
+            if (hash === 'por-favor-evitar') {
+                setShowAvoid(true);
+            }
+
+            const element = document.getElementById(hash);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        };
+
+        // Handle initial load and subsequent hash changes
+        handleHashChange();
+        window.addEventListener('hashchange', handleHashChange);
+
+        return () => {
+            window.removeEventListener('hashchange', handleHashChange);
+        };
+    }, []);
 
     return (
         <>
             <Script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js" />
-            <section className="w-full min-h-[65vh] flex items-center justify-center bg-[#f8f2ee] py-10">
+            <section
+                id="codigo-vestimenta"
+                className="w-full min-h-[65vh] flex items-center justify-center bg-[#f8f2ee] py-10"
+            >
                 <div className="max-w-xl mx-auto text-[#626839]">
                     {/* Title */}
                     <h2
@@ -74,7 +103,7 @@ export default function CodigoVestimenta() {
                     {/* Recommendations & Avoid */}
                     <div className="flex flex-col gap-3 py-14">
                         {/* Recommendations */}
-                        <div className="">
+                        <div id="recomendaciones" className="">
                             <button
                                 type="button"
                                 onClick={() => setShowRecommendations((prev) => !prev)}
@@ -130,7 +159,7 @@ export default function CodigoVestimenta() {
                         </div>
 
                         {/* Avoid section */}
-                        <div className="">
+                        <div id="por-favor-evitar" className="">
                             <button
                                 type="button"
                                 onClick={() => setShowAvoid((prev) => !prev)}
@@ -174,7 +203,7 @@ export default function CodigoVestimenta() {
                                     <li>Tacones finos y altos.</li>
                                     <li>Estampados y patrones grandes.</li>
                                     <li>Vestidos muy cortos y escotados.</li>
-                                    <li>Cualquier tipo de prenda informal: tenis, gorras, etc.</li>
+                                    <li>Cualquier tipo de prenda informal o casual: tenis, gorras, etc.</li>
                                 </ul>
                             </div>
                         </div>
