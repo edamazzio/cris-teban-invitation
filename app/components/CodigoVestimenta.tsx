@@ -65,7 +65,7 @@ export default function CodigoVestimenta() {
                         {/*    Paleta de Color*/}
                         {/*</h3>*/}
                         <p className="im-fell-text text-center mt-6">
-                            Fresco, veraniego y sin corbata. <br/> tonos naturales y
+                            Formal, fresco, elegante, veraniego, sin corbata. <br/> Tonos naturales y
                             pastel ténue
                         </p>
 
