@@ -56,7 +56,7 @@ export default function FincaLaLucia() {
                         className="w-full"
                     >
                         <button
-                            className="w-full sm:w-auto px-5 py-2.5 bg-transparent border-1 border-[#e8e4d8] hover:bg-[#e8e4d8] text-[#e8e4d8] hover:text-[#626839] rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group">
+                            className="w-full px-5 py-2.5 bg-transparent border-1 border-[#e8e4d8] hover:bg-[#e8e4d8] text-[#e8e4d8] hover:text-[#626839] rounded-full transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2 group">
                             {/* Waze Icon */}
                             <span className="w-6 h-6 flex items-center justify-center [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(9%)_saturate(295%)_hue-rotate(350deg)_brightness(95%)_contrast(88%)] group-hover:[filter:brightness(0)_saturate(100%)_invert(37%)_sepia(10%)_saturate(1264%)_hue-rotate(58deg)_brightness(94%)_contrast(89%)] transition-all duration-300">
                                 <Image
