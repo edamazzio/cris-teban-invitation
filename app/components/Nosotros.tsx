@@ -30,7 +30,7 @@ export default function Nosotros() {
             `}</style>
 
             <section
-                className="w-full min-h-[30vh] flex flex-col items-center justify-start relative bg-[#f8f2ee] pb-10">
+                className="w-full min-h-[90vh] flex flex-col items-center justify-start relative bg-[#f8f2ee] pb-10">
                 {/* Image at the top */}
                 {/* Audio player */}
                 <div className="w-full flex justify-center px-4 py-4 mt-2">

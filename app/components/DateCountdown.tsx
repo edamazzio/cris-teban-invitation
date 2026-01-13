@@ -7,7 +7,7 @@ export default function DateCountdown() {
     const weddingDate = new Date('2026-02-21T10:00:00');
 
     return (
-        <section className="min-h-[30vh] w-full flex flex-col items-center justify-center bg-[#626839] relative">
+        <section className="min-h-[72vh] w-full flex flex-col items-center justify-center bg-[#626839] relative">
             <div className="w-full h-full max-w-xl  bg-[#626839] flex flex-col items-center justify-center py-8">
                 {/* Date Display */}
                 <DateDisplay

@@ -29,7 +29,7 @@ const agendaItems = [
 
 export default function Agenda() {
     return (
-        <section className="w-full flex items-center justify-center bg-[#f8f2ee] relative pt-14">
+        <section className="min-h-[60vh] w-full flex items-center justify-center bg-[#f8f2ee] relative pt-14">
             <div className="w-11/12 mx-6 sm:py-10 px-4 sm:px-6 bg-[#f8f2ee] relative">
                 <h2 className="pinyon-heading text-5xl text-[#626839] text-center mb-10">
                     Itinerario

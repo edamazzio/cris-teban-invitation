@@ -59,7 +59,7 @@ export default function AgendaTimelineItem({
             {/* Center line + dot */}
             <div className="flex flex-col items-center h-full">
                 <div
-                    className={`w-0.5 h-7/12 bg-[#626839]/40 ${isFirst ? "opacity-0" : ""}`}
+                    className={`w-0.5 h-7/12 bg-[#626839]/40 ${false ? "opacity-0" : ""}`}
                 />
 
                 <svg
@@ -73,7 +73,7 @@ export default function AgendaTimelineItem({
                 </svg>
 
                 <div
-                    className={`w-0.5 h-7/12 bg-[#626839]/40 ${isLast ? "opacity-0" : ""}`}
+                    className={`w-0.5 h-7/12 bg-[#626839]/40 ${false ? "opacity-0" : ""}`}
                 />
             </div>
 

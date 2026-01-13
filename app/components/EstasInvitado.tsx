@@ -2,7 +2,7 @@
 export default function EstasInvitado() {
     return (
         <section
-            className="min-h-[7vh] w-full flex items-center justify-center bg-[#f8f2ee] relative py-8"
+            className="min-h-[18vh] w-full flex items-center justify-center bg-[#f8f2ee] pt-8"
         >
             <div
                 className="mx-6 py-6 sm:py-10 px-4 sm:px-6  bg-[#f8f2ee] relative">
