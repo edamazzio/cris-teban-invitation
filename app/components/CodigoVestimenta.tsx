@@ -219,9 +219,12 @@ export default function CodigoVestimenta() {
 
 
                     {/* Monogram */}
-                    <div className="mt-8 flex justify-center">
-                        <span className={`pinyon-heading text-3xl text-[#626839]`}>
-                            E &amp; C
+                    <div className="mt-8 flex justify-center flex-col items-center">
+                        <span className={`pinyon-heading text-3xl text-[#626839] mb-5`}>
+                            ¡Ya casi nos vemos!
+                        </span>
+                        <span className={`pinyon-heading text-3xl text-[#626839] tracking-[0.1em]`}>
+                            E&amp;C
                         </span>
                     </div>
                 </div>
