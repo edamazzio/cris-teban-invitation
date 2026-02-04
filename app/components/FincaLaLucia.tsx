@@ -10,16 +10,18 @@ export default function FincaLaLucia() {
     const wazeUrl = `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`;
 
     return (
-        <div className="flex flex-col items-center justify-center py-8 mb-2 w-full">
+        <div className="flex flex-col items-center justify-center py-10 mb-2 w-full">
                 {/* Title */}
-                <h2 className={`im-fell-text text-5xl! text-[#e8e4d8] text-center mb-3`}>
-                    Finca La Lucía
-                </h2>
+                <div className="flex items-center justify-center mb-9">
+                    <Image
+                        src="/n1.png"
+                        alt="Finca La Lucía"
+                        width={150}
+                        height={150}
+                        className="invert"
+                    />
+                </div>
 
-                {/* Subtitle */}
-                <p className="im-fell-text text-[#e8e4d8] text-center mb-8">
-                    Pico Blanco, Escazú
-                </p>
 
                 {/* Navigation Buttons */}
                 <div className="flex flex-col gap-3 justify-center items-center w-full">
