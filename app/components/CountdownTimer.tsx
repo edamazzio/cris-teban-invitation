@@ -28,21 +28,24 @@ export default function CountdownTimer({
         seconds: 0
     });
 
+    const [isOvertime, setIsOvertime] = useState(false);
+
     useEffect(() => {
         const calculateTimeLeft = () => {
             const difference = targetDate.getTime() - new Date().getTime();
 
-            if (difference > 0) {
-                setTimeLeft({
-                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                    minutes: Math.floor((difference / 1000 / 60) % 60),
-                    seconds: Math.floor((difference / 1000) % 60)
-                });
-            } else {
-                setTimeLeft({days: 0, hours: 0, minutes: 0, seconds: 0});
-            }
+            setIsOvertime(difference <= 0);
+
+            const absoluteDifference = Math.abs(difference);
+
+            setTimeLeft({
+                days: Math.floor(absoluteDifference / (1000 * 60 * 60 * 24)),
+                hours: Math.floor((absoluteDifference / (1000 * 60 * 60)) % 24),
+                minutes: Math.floor((absoluteDifference / 1000 / 60) % 60),
+                seconds: Math.floor((absoluteDifference / 1000) % 60)
+            });
         };
+        ;
 
         calculateTimeLeft();
         const timer = setInterval(calculateTimeLeft, 1000);
@@ -56,7 +59,7 @@ export default function CountdownTimer({
         <div className="flex flex-col items-center justify-center py-8 mb-2 w-full">
             {/* "FALTAN" text */}
             <p className="im-fell-text tracking-[0.249em] text-[#e8e4d8] mb-6">
-                FALTAN
+                {isOvertime ? "TIEMPO CASADOS 🤍" : "FALTAN"}
             </p>
 
             {/* Countdown numbers and labels */}
